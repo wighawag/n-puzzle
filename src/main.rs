@@ -1,7 +1,7 @@
 use std::time::{Instant};
 
 extern crate npuzzle;
-use npuzzle::board::create::{snail_generate};
+use npuzzle::board::create::{snail_generate, target_generate};
 use npuzzle::board::check::{is_solvable};
 use npuzzle::args::handle::{handle_args};
 use npuzzle::args::parser::{Config};
@@ -28,7 +28,7 @@ fn main() {
 		panic!("Error: The puzzle is not solvable")
 	}
 
-	let target = snail_generate(size);
+	let target = target_generate(size);
 	println!("Target: {:?}", target);
 
 
